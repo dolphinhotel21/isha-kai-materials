@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>医師会理事会説明資料 案C｜豊岡市 高年介護課</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Noto Sans JP',sans-serif;
+    background:#fafafa;
+    display:flex; justify-content:center; align-items:center;
+    min-height:100vh; padding:20px;
+  }
+  .slide {
+    width:1100px;
+    background:#fff;
+    border-radius:4px;
+    box-shadow:0 2px 20px rgba(0,0,0,0.08);
+    overflow:hidden;
+    border-top:6px solid #2563eb;
+  }
+
+  /* ヘッダー */
+  .header {
+    padding:20px 44px 16px;
+    border-bottom:1px solid #e5e7eb;
+    display:flex; justify-content:space-between; align-items:flex-end;
+  }
+  .badge { background:#2563eb; color:#fff; font-size:9px; font-weight:700; padding:2px 8px; border-radius:2px; letter-spacing:0.1em; margin-bottom:6px; display:inline-block; }
+  .main-title { font-size:19px; font-weight:900; color:#111827; letter-spacing:0.02em; }
+  .sub-title  { font-size:11px; color:#6b7280; margin-top:3px; }
+  .header-right { text-align:right; font-size:11px; color:#6b7280; line-height:1.8; }
+
+  .content { padding:24px 44px 20px; display:flex; flex-direction:column; gap:16px; }
+
+  /* セクションヘッダー */
+  .sec-head {
+    display:flex; align-items:center; gap:8px; margin-bottom:8px;
+  }
+  .sec-head .sec-num {
+    width:22px; height:22px; border-radius:50%;
+    background:#2563eb; color:#fff;
+    font-size:11px; font-weight:700;
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  .sec-head .sec-title { font-size:12px; font-weight:700; color:#374151; letter-spacing:0.05em; }
+
+  /* 背景2列 */
+  .bg-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .bg-card {
+    border:1px solid #e5e7eb; border-radius:4px; padding:12px 14px;
+    border-left:4px solid;
+  }
+  .bg-card.c1 { border-left-color:#f59e0b; }
+  .bg-card.c2 { border-left-color:#2563eb; }
+  .bg-card .bc-tag {
+    font-size:9px; font-weight:700; letter-spacing:0.1em;
+    color:#6b7280; margin-bottom:4px;
+  }
+  .bg-card .bc-title { font-size:13px; font-weight:700; color:#111827; margin-bottom:4px; }
+  .bg-card .bc-body  { font-size:11.5px; color:#4b5563; line-height:1.7; }
+  .bg-card .bc-body strong { color:#dc2626; font-weight:700; }
+
+  /* 課題3列 */
+  .issue-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+  .iss-card {
+    background:#fef2f2; border:1px solid #fecaca; border-radius:4px;
+    padding:12px 12px; display:flex; align-items:flex-start; gap:10px;
+  }
+  .iss-card .ic-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
+  .iss-card .ic-title { font-size:11.5px; font-weight:700; color:#dc2626; margin-bottom:3px; }
+  .iss-card .ic-body  { font-size:10.5px; color:#6b7280; line-height:1.6; }
+
+  /* 方針 */
+  .policy {
+    background:#eff6ff; border:1px solid #bfdbfe; border-radius:4px;
+    padding:14px 20px; display:flex; align-items:center; gap:16px;
+  }
+  .policy .p-bar {
+    width:4px; height:48px; background:#2563eb; border-radius:2px; flex-shrink:0;
+  }
+  .policy .p-main { font-size:14px; font-weight:900; color:#1e40af; margin-bottom:4px; }
+  .policy .p-sub  { font-size:11.5px; color:#3b82f6; line-height:1.7; }
+  .kw { background:#dbeafe; border-radius:2px; padding:1px 5px; font-weight:700; color:#1d4ed8; margin:0 2px; }
+
+  /* フロー */
+  .flow-section {
+    background:#f9fafb; border:1px solid #e5e7eb; border-radius:4px; padding:14px 18px;
+  }
+  .flow-label { font-size:10px; font-weight:700; color:#6b7280; letter-spacing:0.1em; margin-bottom:10px; }
+  .flow { display:flex; align-items:center; gap:6px; }
+  .fbox { flex:1; border-radius:4px; padding:10px 8px; text-align:center; min-width:0; }
+  .fbox .fn { font-size:9px; font-weight:700; opacity:0.6; margin-bottom:2px; }
+  .fbox .ft { font-size:11.5px; font-weight:700; margin-bottom:3px; }
+  .fbox .fd { font-size:10px; line-height:1.5; }
+  .f1 { background:#ecfdf5; border:1px solid #6ee7b7; color:#065f46; }
+  .f2 { background:#eff6ff; border:1px solid #93c5fd; color:#1e40af; }
+  .f3 { background:#fffbeb; border:1px solid #fcd34d; color:#92400e; }
+  .f4 { background:#f5f3ff; border:1px dashed #a78bfa; color:#4c1d95; display:flex; flex-direction:column; gap:4px; padding:8px 6px; }
+  .fb { background:#fff; border-radius:3px; padding:3px 6px; font-size:9.5px; font-weight:700; border:1px solid; text-align:center; }
+  .fb1 { border-color:#fca5a5; color:#991b1b; }
+  .fb2 { border-color:#6ee7b7; color:#065f46; }
+  .fb3 { border-color:#93c5fd; color:#1e40af; }
+  .farr { font-size:18px; color:#d1d5db; flex-shrink:0; }
+
+  /* お願い */
+  .req-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+  .req-card {
+    border:1px solid #e5e7eb; border-radius:4px; padding:12px 14px;
+    border-top:3px solid;
+  }
+  .req-card.r1 { border-top-color:#2563eb; }
+  .req-card.r2 { border-top-color:#16a34a; }
+  .req-card.r3 { border-top-color:#7c3aed; }
+  .req-card .rn { font-size:9px; font-weight:700; letter-spacing:0.1em; color:#9ca3af; margin-bottom:4px; }
+  .req-card .ri { font-size:18px; margin-bottom:4px; }
+  .req-card .rt { font-size:12px; font-weight:700; color:#111827; margin-bottom:4px; }
+  .req-card .rb { font-size:10.5px; color:#6b7280; line-height:1.65; }
+  .req-card .rb b { color:#111827; }
+
+  /* フッター */
+  .footer {
+    background:#f9fafb; border-top:1px solid #e5e7eb;
+    padding:10px 44px; display:flex; justify-content:space-between; align-items:center;
+  }
+  .footer .fn { font-size:10px; color:#9ca3af; }
+  .footer .fo { font-size:11px; font-weight:700; color:#2563eb; }
+</style>
+</head>
+<body>
+<div class="slide">
+
+  <div class="header">
+    <div>
+      <div class="badge">案C｜ミニマル版</div>
+      <div class="main-title">要支援・軽度者への支援の流れと医師会へのお願い</div>
+      <div class="sub-title">自立支援・リエイブルメント推進に向けた連携のお願い</div>
+    </div>
+    <div class="header-right">豊岡市 高年介護課<br>2026年3月</div>
+  </div>
+
+  <div class="content">
+
+    <!-- 背景 -->
+    <div>
+      <div class="sec-head"><div class="sec-num">1</div><div class="sec-title">背景・きっかけ</div></div>
+      <div class="bg-grid">
+        <div class="bg-card c1">
+          <div class="bc-tag">📉 人口動態</div>
+          <div class="bc-title">2040年問題：介護人材の深刻な不足</div>
+          <div class="bc-body">2030年以降、生産年齢人口が急減。2040年には介護・看護職員の<strong>不足が確実視</strong>される。限られた専門職を「本当に必要な方」へ重点配分が急務。</div>
+        </div>
+        <div class="bg-card c2">
+          <div class="bc-tag">📋 制度改定</div>
+          <div class="bc-title">2024年度：国の総合事業ガイドライン改定</div>
+          <div class="bc-body">専門職サービスの対象を<strong>「専門的支援が必要な方」</strong>に重点化する方向へ。進行性疾患・病態不安定・認知症等の方を優先的に位置づけ。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 課題 -->
+    <div>
+      <div class="sec-head"><div class="sec-num">2</div><div class="sec-title">現場の課題</div></div>
+      <div class="issue-grid">
+        <div class="iss-card"><div class="ic-icon">🔄</div><div><div class="ic-title">サービスの固定化</div><div class="ic-body">デイサービスへの長期依存が進み、リエイブルメントの機会が失われている</div></div></div>
+        <div class="iss-card"><div class="ic-icon">⚖️</div><div><div class="ic-title">資源配分の偏り</div><div class="ic-body">軽度者に専門職が分散し、重度・病態不安定な方への支援が手薄になるリスク</div></div></div>
+        <div class="iss-card"><div class="ic-icon">🚪</div><div><div class="ic-title">入口の問題</div><div class="ic-body">アセスメントなしで特定サービスへ流入するケースが発生している</div></div></div>
+      </div>
+    </div>
+
+    <!-- 方針 -->
+    <div>
+      <div class="sec-head"><div class="sec-num">3</div><div class="sec-title">豊岡市の方針</div></div>
+      <div class="policy">
+        <div class="p-bar"></div>
+        <div>
+          <div class="p-main">「してあげる」から「できる自分を取り戻す」（リエイブルメント）へ</div>
+          <div class="p-sub"><span class="kw">地域包括支援センターを起点</span>にアセスメントを実施し、<span class="kw">短期集中リハビリ（元気塾）</span>や<span class="kw">地域資源・住民活動</span>への接続を促進。専門職は本当に必要な方へ重点化。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- フロー -->
+    <div>
+      <div class="sec-head"><div class="sec-num">4</div><div class="sec-title">支援の流れ（新しいイメージ）</div></div>
+      <div class="flow-section">
+        <div class="flow">
+          <div class="fbox f1"><div class="fn">START</div><div class="ft">🧓 患者さん</div><div class="fd">転倒不安・閉じこもり・家事負担など</div></div>
+          <div class="farr">→</div>
+          <div class="fbox f2"><div class="fn">STEP 1</div><div class="ft">🏥 医療機関</div><div class="fd"><b>「まず包括へ」</b>とひと言案内</div></div>
+          <div class="farr">→</div>
+          <div class="fbox f3"><div class="fn">STEP 2</div><div class="ft">🏢 地域包括支援センター</div><div class="fd">相談受付・アセスメント実施</div></div>
+          <div class="farr">→</div>
+          <div class="fbox f4">
+            <div class="fn" style="text-align:center;color:#6d28d9;">STEP 3 振り分け</div>
+            <div class="fb fb1">🏥 専門職サービス（デイ等）</div>
+            <div class="fb fb2">🏋 元気塾（短期集中）</div>
+            <div class="fb fb3">🤝 地域資源（通いの場等）</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- お願い -->
+    <div>
+      <div class="sec-head"><div class="sec-num">5</div><div class="sec-title">先生方へのお願い（3点）</div></div>
+      <div class="req-grid">
+        <div class="req-card r1"><div class="rn">REQUEST 01</div><div class="ri">💬</div><div class="rt">相談先の案内</div><div class="rb">生活上の心配がある患者さんに<b>「まず地域包括支援センターへ」</b>とひと言お勧めください</div></div>
+        <div class="req-card r2"><div class="rn">REQUEST 02</div><div class="ri">🩺</div><div class="rt">専門的助言の提供</div><div class="rb">包括・ケアマネから相談があった際に<b>医学的な意見・留意点のアドバイス</b>をお願いします</div></div>
+        <div class="req-card r3"><div class="rn">REQUEST 03</div><div class="ri">📝</div><div class="rt">意見書・指示書の作成</div><div class="rb">「運動からだ元気塾」参加時に必要な<b>意見書・診療情報提供書の作成協力</b>をお願いします</div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="fn">※デイサービス等の利用を一律に制限するものではありません。適切なアセスメントを経た支援の最適化を目指します。</div>
+    <div class="fo">豊岡市 高年介護課　TEL: 0796-29-0055</div>
+  </div>
+
+</div>
+</body>
+</html>
